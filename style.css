@@ -147,6 +147,7 @@ body {
   color: #fff;
 }
 
+/*to paint the lines before and after the text content*/
 .second-nav-link::before,
 .second-nav-link::after {
   content: "";
@@ -168,8 +169,56 @@ body {
   background-color: #fff;
 }
 
-.dropdown {
-  display: none;
+.second-nav-item:first-child {
+  position: relative;
 }
 
+.dropdown {
+  position: absolute;
+  top: 100%;
+  width: 70rem;
+  background-color: #fffeee;
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(7, 10rem);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.second-nav-item:first-child:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-second-list {
+  grid-column: 3/5;
+}
+
+.dropdown-image {
+  grid-column: 5/-1;
+  width: 100%;
+}
+
+.dropdown-list-item {
+  list-style: none;
+}
+
+.dropdown-list-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #34598f;
+  margin: 0 0 1rem 1.6rem;
+  display: block;
+}
+
+.dropdown-list-link:hover {
+  color: #458a9f;
+}
 /* end nav bar */
