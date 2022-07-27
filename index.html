@@ -21,36 +21,40 @@
     with Sign in text (we cover it by label element and
     give it class as id name in checkbox. It gives us the possibility
     to contact with checkbox by cliking on x or sign in elements) -->
-    <input type="checkbox" id="show-hide-forms" />
+    <!-- modal box -->
+    <input type="checkbox" id="show-hide-forms" hidden />
     <div class="forms-wrapper">
-        <label for="show-hide-forms" class ="x-btn">&#10005</label>
-        <!-- This checkbox is for buttons which were show the 
-        form-->
-        <input type="checkbox" id="show-forms" />
-        <div class="show-btns-wrapper">
-          <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
-          <label for="show-form" class="show-form-btn show-login-form">Log In</label>
+      <label for="show-hide-forms" class="x-btn">&#10005;</label>
+      <input type="checkbox" id="show-form" hidden />
+      <div class="show-btns-wrapper">
+        <label for="show-form" class="show-form-btn show-signup-form"
+          >Sign Up</label
+        >
+        <label for="show-form" class="show-form-btn show-login-form"
+          >Log In</label
+        >
+      </div>
+
+      <form class="signup-form">
+        <h3 class="form-heading">Sign Up</h3>
+        <div class="fullname-inputs-wrapper">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Second Name" />
         </div>
+        <input type="text" class="form-input" placeholder="Username" />
+        <input type="email" class="form-input" placeholder="Email Address" />
+        <input type="password" class="form-input" placeholder="Password" />
+        <input type="submit" value="SIGN UP" class="form-btn" />
+      </form>
 
-        <form class="signup-form">
-            <h3 class = "form-heading">Sign Up</h3>
-            <div class ="fullname-inputs-wrapper">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-            </div>
-            <input type="text" class="input-form" placeholder="Username">
-            <input type="email" class="input-form" placeholder="Email Address">
-            <input type="password" class="input-form" placeholder="Password">
-            <input type="submit" value="SIGN IN" class="form-btn">
-        </form>
-
-        <form class="login-form">
-            <h3 class = "form-heading">Login In</h3>
-            <input type="email" class="input-form" placeholder="Email Address">
-            <input type="password" class="input-form" placeholder="Password">
-            <input type="submit" value="LOGIN IN" class="form-btn">
-        </form>
+      <form class="login-form">
+        <h3 class="form-heading">Log In</h3>
+        <input type="email" class="form-input" placeholder="Email Address" />
+        <input type="password" class="form-input" placeholder="Password" />
+        <input type="submit" value="LOG IN" class="form-btn" />
+      </form>
     </div>
+    <!-- end of modal box -->
 
     <!-- End of the modal box-->
 
