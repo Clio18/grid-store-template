@@ -15,6 +15,45 @@
     <title>Furniture Store</title>
   </head>
   <body>
+    <!-- Modal box-->
+    <!-- Here we create the checkbox and than connect it
+    to label element (which is x button) and to the i element
+    with Sign in text (we cover it by label element and
+    give it class as id name in checkbox. It gives us the possibility
+    to contact with checkbox by cliking on x or sign in elements) -->
+    <input type="checkbox" id="show-hide-forms" />
+    <div class="forms-wrapper">
+        <label for="show-hide-forms" class ="x-btn">&#10005</label>
+        <!-- This checkbox is for buttons which were show the 
+        form-->
+        <input type="checkbox" id="show-forms" />
+        <div class="show-btns-wrapper">
+          <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
+          <label for="show-form" class="show-form-btn show-login-form">Log In</label>
+        </div>
+
+        <form class="signup-form">
+            <h3 class = "form-heading">Sign Up</h3>
+            <div class ="fullname-inputs-wrapper">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <input type="text" class="input-form" placeholder="Username">
+            <input type="email" class="input-form" placeholder="Email Address">
+            <input type="password" class="input-form" placeholder="Password">
+            <input type="submit" value="SIGN IN" class="form-btn">
+        </form>
+
+        <form class="login-form">
+            <h3 class = "form-heading">Login In</h3>
+            <input type="email" class="input-form" placeholder="Email Address">
+            <input type="password" class="input-form" placeholder="Password">
+            <input type="submit" value="LOGIN IN" class="form-btn">
+        </form>
+    </div>
+
+    <!-- End of the modal box-->
+
     <!--Nav bar-->
     <div class="container">
       <ul class="social-icons">
@@ -44,8 +83,10 @@
         <ul class="first-nav-list">
           <li class="first-nav-item">
             <a href="#" class="first-nav-link">
-              <i class="fas fa-sign-in-alt"></i>
-              Sign Up / Log In
+              <label for="show-hide-forms">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign Up / Log In
+              </label>
             </a>
           </li>
           <li class="first-nav-item">
